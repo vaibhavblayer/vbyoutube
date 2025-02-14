@@ -90,12 +90,18 @@ class YouTubeUploader:
 
             print("\nUpload completed successfully!")
 
-            # Immediately save video ID after successful upload
+            # Get video ID and create URL
             video_id = response['id']
+            video_url = f"https://youtu.be/{video_id}"
+
+            # Save video ID to metadata
             metadata['youtube_id'] = video_id
+            metadata['url'] = video_url  # Also save URL in metadata
             with open(metadata_file, 'w') as f:
                 json.dump(metadata, f, indent=4)
-            print(f"Video ID saved to metadata: {video_id}")
+
+            print(f"Video ID: {video_id}")
+            print(f"Video URL: {video_url}")
 
             # Now proceed with additional operations
             try:
