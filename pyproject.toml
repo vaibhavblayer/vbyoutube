@@ -1,0 +1,23 @@
+[project]
+name = "vbyoutube"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "vaibhavblayer",email = "vaibhavblayer@gmail.com"}
+]
+readme = "README.md"
+
+[tool.poetry.scripts]
+vbyoutube = "vbyoutube.main:main"
+
+
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
